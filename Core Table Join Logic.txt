@@ -1,0 +1,49 @@
+Core table design
+
+DataModel : Customer
+
+Table 1 :
+Join Link : Customer --------> Account---------> order--------->order items--------->product
+Columns : Sum(Product_Price)
+
+Table 2 :
+Join Link : Customer --------> order--------->order items--------->product--------->invoice line item--------->shipping details
+Columns : mode of shipping ,courier name
+
+ Table 3 :
+Join Link : Customer --------> order--------->invoice--------->financial tarns--------->Trans Type
+Columns : Trans Amt,Trans type cd,Trans comments
+
+Table 4 :
+Join Link : Customer --------> Delivered---------> product--------->supplier
+Columns : supplier item, supplier status
+
+Table 5 :
+Join Link : Customer --------> delivered---------> product--------->invoice line item
+Columns : product title,product qty, product price, etc.
+
+Table 6 :
+Join Link : supplier --------> product---------> delivered--------->shipping
+Columns :  Required columns
+
+Table 7 :
+Join Link : supplier --------> product---------> product type
+Columns : Required columns
+
+DataModel : student
+
+Table 1 :
+Join Link : student assessment --------> student--------> assessment
+Columns : Required columns
+
+Table 2 :
+Join Link : table1 --------> achievement-------->achievement comments
+Columns : Required columns
+
+Table 3 :
+Join Link : Table1 --------> Assessment note-------->staff-------->staff role
+Columns : Required columns
+
+Table 4 :
+Join Link :Table1--------> address
+Columns : Required columns
